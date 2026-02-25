@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cookbook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --beige: #f6e6d9;
+            --soft-pink: #f8c6d0;
+            --accent: #f2a6b8;
+            --text: #4a3f35;
+        }
+        html,body{height:100%;}
+        body{
+            margin:0;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            background: linear-gradient(180deg, #fffaf8 0%, #fff7f9 50%);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:48px;
+            color:var(--text);
+        }
+
+        /* Cookbook cover */
+        .cover{
+            width:min(920px,96%);
+            background: var(--beige);
+            border-radius:28px;
+            box-shadow: 0 18px 40px rgba(74,63,53,0.18), inset 0 -6px 0 rgba(0,0,0,0.03);
+            padding:36px;
+            position:relative;
+            overflow:hidden;
+            border:1px solid rgba(0,0,0,0.04);
+        }
+
+        /* Decorative spine/stripe */
+        .cover::before{
+            content:'';
+            position:absolute;
+            left:18px;
+            top:18px;
+            bottom:18px;
+            width:84px;
+            background: linear-gradient(180deg, var(--soft-pink), var(--accent));
+            border-radius:16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            transform:skewX(-6deg);
+        }
+
+        header{
+            display:flex;
+            gap:20px;
+            align-items:center;
+        }
+
+        .logo{
+            width:120px;
+            height:120px;
+            border-radius:18px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.45), rgba(255,255,255,0.06)), var(--soft-pink);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-family:'Bubblegum Sans', cursive;
+            font-size:28px;
+            color:#6b3a44;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+        }
+
+        h1{
+            font-family: 'Bubblegum Sans', cursive;
+            font-size:48px;
+            margin:0;
+            color:#6b3a44;
+            letter-spacing:1px;
+        }
+
+        .lead{
+            margin-top:12px;
+            color:#5b4f46;
+            max-width:52ch;
+            line-height:1.45;
+        }
+
+        main{
+            margin-top:18px;
+            display:flex;
+            gap:28px;
+            align-items:flex-start;
+        }
+
+        nav{
+            min-width:220px;
+            background:rgba(255,255,255,0.6);
+            padding:18px;
+            border-radius:14px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+            backdrop-filter: blur(4px);
+        }
+
+        nav a{display:block;color:var(--text);text-decoration:none;padding:8px 0;border-bottom:1px dashed rgba(0,0,0,0.04)}
+
+        section{
+            flex:1;
+            background:transparent;
+        }
+
+        h2{font-size:20px;margin:6px 0 12px 0;color:#5b4138}
+
+        ul{margin:0 0 18px 18px}
+
+        a{color:#6b3a44}
+
+        /* small responsive tweaks */
+        @media (max-width:740px){
+            .cover{padding:20px;border-radius:18px}
+            .logo{width:84px;height:84px;font-size:18px}
+            h1{font-size:32px}
+            main{flex-direction:column}
+            nav{width:100%}
+            .cover::before{display:none}
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <header>
+            <div class="logo">Cook</div>
+            <div>
+                <h1>Cookbook</h1>
+                <p class="lead">Welcome to the Cookbook! Here you will find a collection of delicious recipes to try at home. Whether you're a beginner or an experienced cook, there's something for everyone.</p>
+            </div>
+        </header>
+
+        <main>
+            <nav>
+                <h2>Recipes</h2>
+                <ul>
+                    <li><a href="recipes/spaghetti_bolognese.html">Waraq Inab</a></li>
+                    <li><a href="recipes/chicken_curry.html">Chicken Curry</a></li>
+                    <li><a href="recipes/vegetable_stir_fry.html">Vegetable Stir Fry</a></li>
+                    <li><a href="recipes/chocolate_cake.html">Chocolate Cake</a></li>
+                </ul>
+            </nav>
+
+            <section>
+                <h2>Tips and Tricks</h2>
+                <p>Here are some tips and tricks to help you become a better cook:</p>
+                <ul>
+                    <li>Always read the recipe thoroughly before starting.</li>
+                    <li>Prep all your ingredients before you start cooking.</li>
+                    <li>Use fresh ingredients for the best flavor.</li>
+                    <li>Don't be afraid to experiment with spices and flavors.</li>
+                    <li>Clean as you go to keep your workspace organized.</li>
+                </ul>
+
+                <h2>Contact</h2>
+                <p>If you have any questions or suggestions, feel free to <a href="contact.html">contact us</a>.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
